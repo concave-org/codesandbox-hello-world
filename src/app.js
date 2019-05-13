@@ -6,7 +6,8 @@ import {
   createPipeline
 } from "@concave/concave";
 
-import * as helloPipe from "./pipelines/hello";
+import * as hello from "./pipelines/hello";
+const helloPipe = () => hello
 
 const appStore = createStore((state, action, dispatch) => {
   switch (
