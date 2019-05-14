@@ -7,7 +7,6 @@ import {
 } from "@concave/concave";
 
 import * as hello from "./pipelines/hello";
-const helloPipe = () => hello
 
 const appStore = createStore((state, action, dispatch) => {
   switch (
@@ -19,8 +18,8 @@ const appStore = createStore((state, action, dispatch) => {
 });
 
 const routes = [
-  { path: "/", pipe: helloPipe },
-  { path: "/hello", pipe: helloPipe },
+  { path: "/", pipe: () => helloPipe },
+  { path: "/hello", pipe: () => helloPipe },
   { fallback: "/" }
 ];
 
