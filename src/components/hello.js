@@ -11,4 +11,10 @@ const render = (state, props) => ({
 
 const props = { componentID: "hello-world" };
 
-export default createComponent(render, props);
+const hooks = {
+  mounted: dispatch => {
+    console.log('mounted hook called');
+  }
+}
+
+export default createComponent(render, props, hooks);
