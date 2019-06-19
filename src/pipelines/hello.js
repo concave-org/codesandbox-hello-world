@@ -1,5 +1,5 @@
-import { createPipeline } from "@concave/concave";
+import { createPipeline } from '@concave/concave'
 
 import hello from '../components/hello'
 
-export default createPipeline(hello);
+export default createPipeline(hello)
